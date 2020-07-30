@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <title>HTMLのタイトル</title>
   <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer ></script>
   <script type="text/javascript" src="../base/layout/template.js"></script>
@@ -13,91 +13,138 @@
   </style>
 </head>
 <body>
-  <script type="text/javascript">header();</script>
-  <script type="text/javascript">account();</script>
-  <script type="text/javascript">link();</script>
-  <main class="columns">
-    <div class="submenu column is-3">
-      <aside class="box">
-        カサレアルは、ＸＸＸＸＸＸＸＸを実現する会社です。私たちは△△△△△△△△を通じて社会に貢献していきます。
-      </aside>
-      <aside class="box menu">
-         <p class="menu-label">
-            おすすめの一言
-         </p>
-         <ul class="menu-list">
-             <li><a href="#">株式会社カサ<small>@casainc</small></a></li>
-             <li><a href="#">レア製作所<small>@rea-product</small></a></li>
-             <li><a href="#">オフィス・アル<small>@office-al</small></a></li>
-          </ul>
-          <p class="menu-label">
-              キーワード
-          </p>
-          <ul class="menu-list">
-             <li><a href="#">システム開発</a></li>
-             <li><a class="is-active" href="#">技術教育</a>
-                 <ul>
-                   <li><a href="#">一社研修</a></li>
-                   <li><a href="#">定期開催コース</a></li>
-                  </ul>
-              </li>
-              <li><a href="#">ソフトウェアテスティング</a></li>
-          </ul>
-       </aside>
-    </div>
-    <div class="column">
-      <article class="box media">
-        <figure class="media-left">
-           <p class="image is-64x64">
-              <img src="http://placehold.it/128x128">
-           </p>
-        </figure>
-        <div class="media-content">
-           <div class="content">
-              <p><strong>CASAREAL</strong><br>
-                 内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容<br>
-                 <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
-               </p>
-           </div>
-           <article class="media">
-               <figure class="media-left">
-                  <p class="image is-48x48">
-                     <img src="http://placehold.it/96x96">
+   <script type="text/javascript">header();</script>
+   <script type="text/javascript">account();</script>
+   <script type="text/javascript">link('profile');</script>
+   <main class="columns">
+      <div class="submenu column is-3">
+         <aside class="box">
+            <script type="text/javascript">side_twitter();</script>
+         </aside>
+      </div>
+      <div class="column">
+         <article class="box media">
+            <div class="media-content">
+               <div class="content">
+                  <h1 id="who_am_i">Who am I !?</h1>
+                  <p>名前: makao26<br>Twitter:@makao26</p>
+                  <h2 id="coment">コメント</h2>
+                  <p>関西に出没するITエンジニアです。楽しく開発がモットーです。</p>
+                  <h2>基本データ</h2>
+                  <p>
+                     誕生日: 1994.12.05<br>
+                     性別: 男<br>
+                     学歴: 京都産業大学 コンピュータ理工学部 インテリジェントシステム学科 卒業<br>
+                     資格: 基本情報技術者<br>
+                     趣味: フットサル（サッカー）、WEBアプリオケーション作成<br>
+                     特技: 幅広いIT技術を薄らキャッチアップすること<br>
                   </p>
-               </figure>
-               <div class="media-content">
-                  <div class="content">
-                    <p><strong>Sean Brown</strong><br>
-                       コメントコメントコメントコメントコメントコメントコメントコメントコメントコメント<br>
-                       <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
-                    </p>
-                  </div>
-                  <article class="media">
-                     リプライリプライリプライリプライリプライリプライリプライリプライリプライリプライ。
-                  </article>
-                  <article class="media">
-                     リプライリプライリプライリプライリプライリプライリプライリプライリプライリプライ。
-                  </article>
+                  <hr>
+                  <h2 id="career" >職務経歴</h2>
+                  <div id="Company01">
+                  <h3>社会インフラ系SIer</h3>
+                  <p>
+                     1: トレインビジョンシステム (車上)<br>
+                     担当フェーズ: ソフトウェア設計、テスト設計、プログラミング、単体テスト、組み合わせテスト<br>
+                     開発環境: Linux<br>
+                     開発言語・フレームワーク・DB: C言語<br>
+                     メンバー: 4人<br>
+                     役割: SE、PG、TS<br>
+                     ポイント:<br>
+                     入社して間もない頃から大学時代プログラミングを行ってきたことを評価され、
+                     ソフトウェア設計、プログラミングを中心に任された。<br>
+                     既存のシステムの改修なのでまずどこをどのように変更すれば良いのかコードを解析することで貢献できた。<br>
+                  </p>
+                  <p>
+                     2: トレインビジョンシステム (地上)<br>
+                     担当フェーズ: プログラミング、単体テスト<br>
+                     開発環境: Windows 10、Eclipse<br>
+                     開発言語・フレームワーク・DB: Java、Oracle Database<br>
+                     メンバー: 3人<br>
+                     役割: PG、TS<br>
+                     ポイント:<br>
+                     Javaを用いて、テストコードの作成、ソースコードの作成を行った。<br>
+                     ラムダ式などモダンなソフトウェアでは当たり前に使われている知識を業務で実際に使用することができた。<br>
+                     また、SQLを本格的に扱うことで関係データベースの基礎的なことを体得できた。<br>
+                  </p>
+                  <p>
+                     3: 電力管理システム <br>
+                     担当フェーズ: プログラミング、単体テスト<br>
+                     開発環境: Linux<br>
+                     開発言語・フレームワーク・DB: C言語<br>
+                     メンバー: 3人<br>
+                     役割: PG、TS<br>
+                     ポイント:<br>
+                     プログラミングを中心に任された。既存のシステムの改修なのでまずソースコード解析を行い、
+                     現状の設計では実装が難しい部分は設計変更を提案し実装面から設計者をサポートした。<br>
+                     また、簡単なリファクタリングを行いソースコードのメンテナンス性も向上に貢献できた。<br>
+                  </p>
+                  <p>
+                     4: 電力管理システム (シミュレータ) <br>
+                     担当フェーズ: プログラミング、単体テスト<br>
+                     開発環境: Windows XP(VM Ware)<br>
+                     開発言語・フレームワーク・DB: Delphi、postgresql、VBA<br>
+                     メンバー: 3人<br>
+                     役割: PG、TS<br>
+                     ポイント:<br>
+                     かなり古いソフトウェアの為、開発ノウハウが失われつつある状態だったので、開発手順書の作成、
+                     テスト手順もあいまいな状態であったので、テスト手順書の作成を行い、その手順書をもとに他の人に
+                     試験をしてもらうことで開発ノウハウの展開することができた。<br>
+                     ソフトウェアの解析をメンバーと行いブラックボックスであった部分がクリアになったことで追加開発をする
+                     際の工数削減に貢献できた。<br>
+                     メンバーのタスク管理工程管理を任されており、タスクの分解、振り分け、作業時間の計測などを行った。<br>
+                  </p>
                </div>
-           </article>
-        </div>
-     </article>
-     <article class="box media">
-        <figure class="media-left">
-           <p class="image is-48x48">
-              <img src="http://placehold.it/96x96">
-           </p>
-        </figure>
-        <div class="media-content">
-           <div class="content">
-              <p><strong>CASAREAL</strong><br>
-                内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容<br>
-                <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
-              </p>
-           </div>
-        </div>
-     </article>
-    </div>
-  </main>
+               <hr>
+               <div id="Company02">
+                  <h3 id="gz">スマホ、PC向けゲーム会社</h3>
+                  <p>
+                     1: 教育機関向け、オンライン学習システム開発<br>
+                     担当フェーズ: 仕様検討、機能仕様設計<br>
+                     開発環境: なし<br>
+                     開発言語・フレームワーク・DB: JavaScript<br>
+                     メンバー: 5人<br>
+                     役割: SE<br>
+                     ポイント:<br>
+                     今回の主な役割は仕様検討と画面設計である。仕様検討に関しては連携しているWebAPIの仕様を
+                     理解するためWEBAPIをたたくツールを使用して仕様がどうすれば実現可能のなのかをお客様に提示
+                     することができた。<br>
+                     また、没になった機能ではあるが、小さいJavaScriptのデモソースコードを製作した。
+                     これを機に業務外の学習でJavaScriptの基本的な技術要素を獲得することができた。<br>
+                  </p>
+                  <p>
+                     2: スマホ、PC向けソーシャルカードゲーム<br>
+                     担当フェーズ: 運用、改修<br>
+                     開発環境: Windowsサーバ(AWS)<br>
+                     開発言語・フレームワーク・DB: C#、.NET、SQLServer <br>
+                     メンバー: 6人<br>
+                     役割: SE、PG<br>
+                     ポイント:<br>
+                     毎週行われるゲーム内イベント前のメンテナンスをすることでAWSのRDS、EC2、ロードバランサー等の
+                     実務経験を手に入れることができた。<br>
+                     バグの解析を行い、チームのエンジニアに展開し改修方法を提案することができた。<br>
+                     お客様のデータのCSVをPythonで操作するツールを作成して、一つ一つコピペするような手作業をなくすことに成功した<br>
+                  </p>
+                  <p>
+                     3: スマホ、PC向けソーシャルカードゲーム<br>
+                     担当フェーズ: 詳細設計、開発<br>
+                     開発環境: Linuxサーバー(AWS)<br>
+                     開発言語・フレームワーク・DB: PHP、Laravel、、MySQL <br>
+                     メンバー: 人<br>
+                     役割: サーバーサイドのSE、PG<br>
+                     ポイント:<br>
+                     新規開発の案件に途中から参加した。主にインゲーム部分と報酬配布のバッチ処理を担当した。<br>
+                     業務内容としては、WebAPI設計、DB設計、API実装など。ゲームのサーバーサイドではRedisを多用する。
+                     Redisを用いたロック処理などを通してRedisの知見が深まった。<br>
+                     アイテムを消費してステージをスキップする機能などではトランザクション処理の必要性などを考えた上でコーディングした。<br>
+                     オートでマップ上のマスを移動する機能の解析、改修を行いロジックを考えコーディングする力を上昇した。<br>
+                     案件に参画する前からLaravelを使うと事前に知っていたため、予め勉強しておいたので、スムーズに開発をする
+                     ことができた。<br>
+                  </p>
+               </div>
+            </div>
+         </article>
+      </div>
+   </main>
 </body>
 </html>

@@ -3,7 +3,7 @@ function header(){
   html += '<header class="navbar">';
   html += '<div class="navbar-brand">';
   html += '<span class="navbar-item">';
-  html += '<span class="fa fa-language"></span>一言SNS';
+  html += '<span class="fa fa-language"></span>ポートフォリオ';
   html += '</span>';
   html += '</div>';
   html += '<div class="navbar-end">';
@@ -39,22 +39,33 @@ function account(){
   document.write(html);
 }
 
-function link(){
+function link(active_page){
   var html = "";
   html += '<section class="level">';
   html += '<div class="level-left"></div>';
   html += '<div class="level-right">';
   html += '<div class="level-item tabs">';
   html += '<ul>';
-  html += '<li class="is-active"><a>最近の一言</a></li>';
-  html += '<li><a>古い一言</a></li>';
-  html += '<li><a>コメント付き</a></li>';
+  if(active_page === 'profile'){
+    html += '<li class="is-active"><a href="http://localhost:8888/client_js/profile/index.html">プロフィール</a></li>';
+    html += '<li><a>投稿記事</a></li>';
+    html += '<li><a>お問い合わせ</a></li>';
+  }else if(active_page === 'article'){
+    html += '<li ><a href="http://localhost:8888/client_js/profile/index.html">プロフィール</a></li>';
+    html += '<li class="is-active"><a>投稿記事</a></li>';
+    html += '<li><a>お問い合わせ</a></li>';
+  }else if(active_page === 'contact'){
+    html += '<li ><a href="http://localhost:8888/client_js/profile/index.html">プロフィール</a></li>';
+    html += '<li><a>投稿記事</a></li>';
+    html += '<li class="is-active"><a>お問い合わせ</a></li>';
+  }
   html += '</ul>';
   html += '</div>';
   html += '</div>';
   html += '<div class="level-right">';
   html += '<div class="level-item">';
-  html += '<a class="button is-greylight">フォロー</a>';
+  html += '<a href="https://twitter.com/makao26?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @makao26</a>';
+  html += '<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
   html += '</div>';
   html += '</div>';
   html += '</section>';
@@ -68,6 +79,13 @@ function footer(){
   html += '<div class="content has-text-centered">2020 ©CASAREAL</div>';
   html += '</div>';
   html += '</footer>';
+  document.write(html);
+}
+
+function side_twitter(){
+  var html = "";
+  html += '<a class="twitter-timeline" href="https://twitter.com/makao26?ref_src=twsrc%5Etfw">Tweets by makao26</a>';
+  html += '<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
   document.write(html);
 }
 
