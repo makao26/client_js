@@ -18,14 +18,15 @@ function getValue() {
     var $formObject = document.getElementById( "contact-form" );
 
     //input[name=text]
-    document.getElementById( "output-name" ).innerHTML = $formObject.formName.value;
-    document.getElementById( "output-mail" ).innerHTML = $formObject.formMail.value;
+    // document.getElementById( "output-name" ).innerHTML = $formObject.formName.value;
+    document.getElementById( "output-name" ).innerHTML = validationName($formObject.formName.value);
+    document.getElementById( "output-mail" ).innerHTML = validationMail($formObject.formMail.value);
 
      //select
     document.getElementById( "output-contact-type" ).innerHTML = $formObject.formContactType.value;
 
      //textarea
-    document.getElementById( "output-contact-text" ).innerHTML = $formObject.formContactText.value;
+    document.getElementById( "output-contact-text" ).innerHTML = validationContactText($formObject.formContactText.value);
 
     //input[name=radio] ※自力
     //$formObject.formSex.checked.valueっていうのはできないし、$formObject.formSex.valueにするとSafariでundefinedになるのでいろいろ試行錯誤した    
@@ -40,3 +41,29 @@ function getValue() {
     //     }
     // }
 }
+
+function validationName(nameValue){
+    if(nameValue){
+        return nameValue;
+    }else{
+        return 'Please enter your name';
+    }
+}
+
+function validationMail(mailValue){
+    var reg = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/;
+    if(reg.test(mailValue)){
+        return mailValue;
+    }else{
+        return 'Check your email address';
+    }
+}
+
+function validationContactText(contactTextValue){
+    if(contactTextValue){
+        return ontactTextValue;
+    }else{
+        return 'Please enter contact text';
+    }
+}
+
