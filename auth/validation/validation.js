@@ -83,8 +83,8 @@ function checkSamePassword(inputPasswordValue,confirmPasswordValue){
 //バリデーションチェックしてかすれ制御
 function validationSubmitButton(){
     if(validationFlag[0]==true && validationFlag[1]==true && validationFlag[2]==true && validationFlag[3]==true && validationFlag[4]==true){
-        document.getElementById("submit").disabled = "";
+        document.getElementById("btn").disabled = "";
     }else{
-        document.getElementById("submit").disabled = "disabled";
+        document.getElementById("btn").disabled = "disabled";
     }
 }
