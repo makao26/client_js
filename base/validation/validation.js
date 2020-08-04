@@ -1,6 +1,13 @@
 //フォームで入力した値を即時取得する
 //ファームで入力した値を取得した時バリデーションチェックを行う
 
+//バリデーションチェック用のフラグ
+var validationFlag = new Array(3);
+//初期化不要かどうか検証必要
+// for(let i=0;i<3;i++){
+//     validationFlag[i] = false;
+// }
+
 //一回初期のvalueを取得その後はキーアップとオンチェンジの際にvalueの値を取得する
 window.onload = function () {
     getValue();
@@ -40,12 +47,17 @@ function getValue() {
     //         document.getElementById( "sampleOutputHobby" ).innerHTML += $formObject.formHobby[$i].value + ' ';
     //     }
     // }
+
+    //ボタンかすれ制御
+    validationSubmitButton();
 }
 
 function validationName(nameValue){
     if(nameValue){
+        validationFlag[0] = true;
         return nameValue;
     }else{
+        validationFlag[0] = false;
         return 'Please enter your name';
     }
 }
@@ -53,17 +65,29 @@ function validationName(nameValue){
 function validationMail(mailValue){
     var reg = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/;
     if(reg.test(mailValue)){
+        validationFlag[1] = true;
         return mailValue;
     }else{
+        validationFlag[1] = false;
         return 'Check your email address';
     }
 }
 
 function validationContactText(contactTextValue){
     if(contactTextValue){
-        return ontactTextValue;
+        validationFlag[2] = true;
+        return contactTextValue;
     }else{
+        validationFlag[2] = false;
         return 'Please enter contact text';
     }
 }
 
+//バリデーションチェックしてかすれ制御
+function validationSubmitButton(){
+    if(validationFlag[0]==true && validationFlag[1]==true && validationFlag[2]==true){
+        document.getElementById("submit").disabled = "";
+    }else{
+        document.getElementById("submit").disabled = "disabled";
+    }
+}
