@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       };
     //   var token = 'Bearer xxxxxxx' //ローカルストレージからの読み出したトークン
-      xhr.open('POST', 'http://localhost:8888/webapi_laravel/public/api/register');
+      xhr.open('POST', 'http://localhost:8888/api_laravel/public/api/register');
       xhr.setRequestHeader('content-type', 'application/json;charset=UTF-8');
     //   xhr.setRequestHeader('Authorization', token); // 追加
       xhr.responseType = "json";

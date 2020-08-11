@@ -2,16 +2,39 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-  <title>HTMLのタイトル</title>
-  <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer ></script>
-  <script type="text/javascript" src="../base/layout/template.js"></script>
-  <script type="text/javascript" src="./validation/validation.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
-  <style>
-    main {
-      background-color: #eeeeee;
-    }
-  </style>
+   <title>HTMLのタイトル</title>
+   <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer ></script>
+   <script type="text/javascript" src="../base/layout/template.js"></script>
+   <script type="text/javascript" src="./validation/validation.js"></script>
+   
+   <!-- <script>
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            console.log(xhr.responseText);
+          } else {
+            console.log('サーバーエラーが発生しました。');
+          }
+        } else {
+          console.log('通信中...');
+        }
+      };
+        xhr.open('GET', 'http://localhost:8888/webapi_laravel/public/api/getpublickey',true);
+        xhr.setRequestHeader('content-type', 'application/json;charset=UTF-8');
+        xhr.responseType = 'json';
+        xhr.send(null);
+        xhr.onload = function () {
+        var data = this.response;
+        console.log(data);
+        };
+   </script> -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+   <style>
+      main {
+         background-color: #eeeeee;
+      }
+   </style>
 </head>
 <body>
    <script type="text/javascript">header();</script>
@@ -63,6 +86,9 @@
                         <div class="field">
                            <input id="btn" type="button" class="button is-info" name="submit" value="送信" />
                         </div>
+                        <div class="field">
+                            <input id="aaa" type="button" class="button is-info" name="submit" value="送信" />
+                         </div>
                     </form>
 
                     <!-- 出力部分 -->
@@ -80,9 +106,15 @@
                         パスワード入力確認チェック：<span id="output-password-same-chack"></span>
                         <br />
                     </div>
-
                     <div id="result"></div>
                     <script src="./ajax/siginup.js"></script>
+
+                    <div>
+                       <div class="field">
+                           <input type="file" multiple id="hoge">
+                       </div>>
+                    </div>
+                    <script src="./getpublickey/getpublickey.js"></script>
                 </div>
             </div>
          </article>
